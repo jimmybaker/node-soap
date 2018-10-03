@@ -7,13 +7,14 @@
   },
   "author": "Vinay Pulim <v@pulim.com>",
   "dependencies": {
+    "assert": "^1.4.1",
     "bluebird": "^3.5.0",
     "concat-stream": "^1.5.1",
     "debug": "^2.6.9",
     "ejs": "~2.5.5",
     "finalhandler": "^1.0.3",
-    "lodash": "^4.17.5",
     "httpntlm": "^1.5.2",
+    "lodash": "^4.17.5",
     "request": ">=2.9.0",
     "sax": ">=0.6",
     "serve-static": "^1.11.1",
@@ -33,9 +34,9 @@
   "scripts": {
     "toc": "./node_modules/.bin/doctoc Readme.md --github --maxlevel 3",
     "pretest": "jshint index.js lib test",
-    "cover": "nyc --reporter=lcov --reporter=html --reporter=text mocha --exit test/*-test.js test/security/*.js",
+    "cover": "nyc --reporter=lcov --reporter=html --reporter=text mocha --exit test/*-test.js",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js -v",
-    "test": "mocha --timeout 10000 --exit test/*-test.js test/security/*.js"
+    "test": "mocha --timeout 10000 --exit test/*-test.js"
   },
   "keywords": [
     "soap"
